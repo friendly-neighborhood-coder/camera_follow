@@ -25,12 +25,12 @@ on("chat:message", (msg) => {
                 cameraFollowEnabled = false;
                 sendChat("CameraFollow", "/w gm Camera follow disabled.");
             } else if (args[1] === "all") {
-				moveAll = !moveAll;
-				sendChat("CameraFollow", "/w gm move all players: " + moveAll);
-		    } else if (args[1] === "move") {
-				followMoveEnabled = !followMoveEnabled;
-				sendChat("CameraFollow", "/w gm follow token moves: " + followMoveEnabled);
-		    } else {
+		moveAll = !moveAll;
+		sendChat("CameraFollow", "/w gm move all players: " + moveAll);
+	    } else if (args[1] === "move") {
+		followMoveEnabled = !followMoveEnabled;
+		sendChat("CameraFollow", "/w gm follow token moves: " + followMoveEnabled);
+	    } else {
                 sendChat("CameraFollow", "/w gm Usage: !camera-follow [on|off|all|move]");
             }
         }
@@ -66,13 +66,13 @@ function getCameraPlayer() {
     if (cachedCameraPlayer) return cachedCameraPlayer;
 
     const cameraPlayer = findObjs({
-		_type: "player",
-		_displayname: CAMERA_MAN_NAME
+	_type: "player",
+	_displayname: CAMERA_MAN_NAME
     })[0];
 
     if (!cameraPlayer) {
-		log("Camera man player not found. Check CAMERA_MAN_NAME.");
-	}
+	log("Camera man player not found. Check CAMERA_MAN_NAME.");
+    }
 
     cachedCameraPlayer = cameraPlayer;
     return cameraPlayer;
@@ -87,8 +87,8 @@ function moveCam(token) {
     const pageId = token.get("pageid");
 
     if (!moveAll) {
-		sendPing(x, y, pageId, cameraPlayer.id, true, cameraPlayer.id);
+	sendPing(x, y, pageId, cameraPlayer.id, true, cameraPlayer.id);
     } else {
-		sendPing(x, y, pageId, cameraPlayer.id, true);
+	sendPing(x, y, pageId, cameraPlayer.id, true);
     } 
 }
