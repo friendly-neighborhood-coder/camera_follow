@@ -10,7 +10,7 @@ This is a custom Roll20 API script that automatically centers the view of a spec
 
 ## Installation
 
-1. Copy the contents of [`camera-follow.js`](./camera_follow.js) into the Roll20 API Scripts editor.
+1. Copy the contents of [`camera_follow.js`](./camera_follow.js) into the Roll20 API Scripts editor.
    1. From your Game Details Page, click "Settings" -> "Mod (API) Scripts".
    2. Click "New Script".
    3. Paste content and name the script.
@@ -38,6 +38,9 @@ GM-only chat commands:
 
     !camera-follow all
     Toggles whether the camera movement applies to all players (true) or only the camera account (false).
+
+    !camera-follow move
+    Toggles whether the camera will follow the movement of the active token. Defaults to true.
 
 ## License
 
