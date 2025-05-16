@@ -15,7 +15,7 @@ This is a custom Roll20 API script that automatically centers the view of a spec
    2. Click "New Script".
    3. Paste content and name the script.
 3. Save and enable the script.
-4. Ensure your cameraaccount (e.g., "Camera Man") matches the name defined in the configuration.
+4. Ensure your camera account (e.g., "Camera Man") matches the name defined in the configuration.
 
 ## Configuration
 
